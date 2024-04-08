@@ -1,18 +1,12 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
 
     public static void main(String[] args) {
-        FileHandler fh = new FileHandler();
-
+        UserInterface ui = new UserInterface();
         try {
-            //load data
-            ArrayList<Covid19Data> covidData = fh.loadAllData();
-
-            // display data
-            for (Covid19Data covid : covidData) {
-                System.out.println(covid);
-            }
+            ui.startProgram();
         } catch (Exception e) {
             System.out.println("Error. " + e.getMessage());
         }

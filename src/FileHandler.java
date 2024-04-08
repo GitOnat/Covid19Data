@@ -7,9 +7,9 @@ import java.util.Scanner;
 
 public class FileHandler {
     private final File file = new File("Covid19Data.csv");
+    ArrayList<Covid19Data> covid19Array = new ArrayList();
 
     public ArrayList<Covid19Data> loadAllData() throws IOException {
-        ArrayList<Covid19Data> covid19Array = new ArrayList();
             Scanner sc = new Scanner(file, StandardCharsets.ISO_8859_1);
             sc.nextLine();  // Skip første linje
 
@@ -23,6 +23,9 @@ public class FileHandler {
             covid19Array.add(covidObj);
         }
         sc.close();
+        return covid19Array;
+    }
+    public ArrayList<Covid19Data> getCovid19Array() {
         return covid19Array;
     }
 }

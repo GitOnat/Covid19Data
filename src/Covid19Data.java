@@ -20,14 +20,20 @@ public class Covid19Data {
 
     @Override
     public String toString() {
-        return "Covid19Data{" +
-                "region=" + region +
-                ", aldersgruppe='" + aldersgruppe + '\'' +
-                ", bekræftede='" + bekræftede + '\'' +
-                ", døde='" + døde + '\'' +
-                ", indlagtePåIntensiv='" + indlagtePåIntensiv + '\'' +
-                ", indlagte='" + indlagte + '\'' +
-                ", dato='" + dato + '\'' +
-                '}';
+        return  "Region = '" + region + '\'' +
+                ", Aldersgruppe = '" + aldersgruppe + '\'' +
+                ", Bekræftede = '" + bekræftede + '\'' +
+                ", Døde = '" + døde + '\'' +
+                ", IndlagtePåIntensiv = '" + indlagtePåIntensiv + '\'' +
+                ", Indlagte = '" + indlagte + '\'' +
+                ", Dato = '" + dato + '\'';
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    public String getAldersgruppe() {
+        return aldersgruppe;
     }
 }
